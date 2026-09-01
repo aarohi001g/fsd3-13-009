@@ -57,9 +57,9 @@ const main  = async () => {
                     price: Number(price),
                    qty : Number(qty),
                       };
-                      //console.log(product);
-
-                      await addtoCart(product);
+                       console.log(product);
+                      //await addtoCart(product);
+                      
             break;
             case 2:
               showCart();
@@ -78,6 +78,7 @@ const main  = async () => {
             console.log("Invalid choice! try again 🔴");
     }
       } while (choice != "5");
+
 
     cin.close();
 
