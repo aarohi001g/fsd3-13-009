@@ -6,7 +6,7 @@ const server = http.createServer((req, res) => {
     res.setHeader("Content-Type", "text/html");
     res.write(`
         <a href='/bottle'>Bottle</a>
-        <a href='/'>POT</a>`);
+        <a href='/pot'>POT</a>`);
     res.end();
 
     const stream = createReadStream("index.html", { encoding: "utf-8" });
