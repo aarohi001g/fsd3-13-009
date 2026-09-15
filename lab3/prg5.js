@@ -1,4 +1,4 @@
-import http from "http";
+import http from "http"
 
 const server = http.createServer((req,res)=>{
 
@@ -13,7 +13,20 @@ const server = http.createServer((req,res)=>{
 if(req.url === '/') {
  res.setHeader("content-type",  "text/html");
 res.end("<h1> Hello Server</h1>");   
-}
+}else if (req.url === '/products') {
+    const products = [
+        {id: 1, name: 'mobile', price: 10000},
+        {id: 2, name: 'laptop', price: 50000},
+        {id: 3, name: 'tablet', price: 20000}
+    ];
+ res.writeHead(200, {"content-type": "application/json"});
+ res.end(JSON.stringify(products));
+    }
+    else {
+        
+    
+        res.end();
+    }
 }); 
 
 server.listen(5000, () => console.log("prg5 is running"));
