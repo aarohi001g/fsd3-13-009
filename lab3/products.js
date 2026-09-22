@@ -14,3 +14,7 @@ export const addProduct = (item) => {
       products.push(item);
       return item;
 };
+
+export const deleteProduct = () => {
+    
+}
