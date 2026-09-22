@@ -8,11 +8,12 @@ let nextID= 3;
 
 export const getAllProducts=()=>{
  return products;
-}
+};
 
-export const addProduct=(product)=>{
-    nextID++;
-    product.id=nextID;
-    products.push(product);
-    return product;
-}
+export const addProduct=(item)=>{
+
+    item.id=nextId;
+     nextID++;
+    products.push(item);
+    return item;
+};
