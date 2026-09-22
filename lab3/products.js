@@ -10,3 +10,9 @@ export const getAllProducts=()=>{
  return products;
 }
 
+export const addProduct=(product)=>{
+    nextID++;
+    product.id=nextID;
+    products.push(product);
+    return product;
+}
