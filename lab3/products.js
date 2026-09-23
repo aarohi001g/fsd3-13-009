@@ -41,8 +41,9 @@ export const getProductById = (pid) => {
 
     return products.find((prd) => prd.id === pid);
 
-    if (index == -1){
-return false; 
-    }
+  if (index === -1) {
+    return false;   
+  }
+  return products[index];
                   
 };
