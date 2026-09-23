@@ -1,5 +1,5 @@
 import http from "http";
-import { getAllProducts, addProduct, deleteProduct } from "./products.js";
+import { getAllProducts, addProduct, deleteProduct, getProductById, updateProduct } from "./products.js";
 
 const server = http.createServer((req, res) => {
 

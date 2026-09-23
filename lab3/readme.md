@@ -100,4 +100,13 @@ are used to tell the client, the type of data sent by the server. it may be html
 3. applications/json -> json contents/ file
 4. text/css -> stylesheet
 5. application/form-data -> for uploading file
-6. application/auth: for tokens the headers can be set by res obj at 
+6. application/auth: for tokens the headers can be set by res obj at  server side by two ways
+-> res.setHeaders()
+-> res.writeHead()
+
+
+
+Get-> no parameter will pass to the server when we receive all items
+post-> to add records we pass the value from body section in JSON format of api tester(echo api)
+delete-> to delete any product we pass parameter that is id of the product from url
+update-> to update any product we pass id from url and data to update from body
