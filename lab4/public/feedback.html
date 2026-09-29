@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | Bright Future Tuition Classes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="logo">Bright Future Tuition Classes</div>
+    <nav>
+        <a href="registration.html">Registration</a>
+        <a href="login.html">Login</a>
+        <a href="process.html">Process</a>
+        <a href="feedback.html" class="active">Feedback</a>
+        <a href="price-details.html">Price Details</a>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="hero">
+        <h1>Student Feedback</h1>
+        <p>Your feedback helps us improve our classes and teaching experience.</p>
+    </section>
+
+    <section class="card form-card">
+        <h2>Share Your Experience</h2>
+        <form action="#" method="post">
+            <label for="student">Student Name</label>
+            <input type="text" id="student" placeholder="Enter your name" required>
+
+            <label for="feedback-email">Email Address</label>
+            <input type="email" id="feedback-email" placeholder="Enter your email" required>
+
+            <label for="rating">Rate Our Classes</label>
+            <select id="rating" required>
+                <option value="">Select rating</option>
+                <option>5 - Excellent</option>
+                <option>4 - Very Good</option>
+                <option>3 - Good</option>
+                <option>2 - Average</option>
+                <option>1 - Needs Improvement</option>
+            </select>
+
+            <label for="message">Your Feedback</label>
+            <textarea id="message" rows="6" placeholder="Write your feedback here..." required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Bright Future Tuition Classes. All Rights Reserved.</p>
+    <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+</footer>
+</body>
+</html>

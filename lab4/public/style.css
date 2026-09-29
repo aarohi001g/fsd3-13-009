@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #173b6c;
+    color: white;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 9px 13px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+nav a:hover,
+nav a.active {
+    background: #2f6fb2;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+    flex: 1;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    color: #173b6c;
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #555;
+    font-size: 17px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.form-card {
+    max-width: 650px;
+    margin: auto;
+}
+
+.small-card {
+    max-width: 500px;
+}
+
+.card h2 {
+    color: #173b6c;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin: 14px 0 7px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd5df;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2f6fb2;
+}
+
+button,
+.price-button {
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #173b6c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+button:hover,
+.price-button:hover {
+    background: #2f6fb2;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.remember input {
+    width: auto;
+}
+
+.remember label {
+    margin: 0;
+    font-weight: normal;
+}
+
+.center-text {
+    text-align: center;
+    margin-top: 18px;
+}
+
+.center-text a {
+    color: #173b6c;
+    font-weight: bold;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.step-card {
+    text-align: center;
+}
+
+.step-icon,
+.price-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #e7f0fb;
+    color: #173b6c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+}
+
+.step-card h2 {
+    font-size: 19px;
+}
+
+.step-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.info-section {
+    margin-top: 25px;
+}
+
+.info-section li {
+    margin: 12px 0 12px 22px;
+}
+
+.pricing {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.price-card {
+    text-align: center;
+    position: relative;
+}
+
+.price-card h2 {
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #173b6c;
+    font-size: 34px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.price span {
+    font-size: 15px;
+    color: #777;
+    font-weight: normal;
+}
+
+.price-card ul {
+    list-style: none;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.price-card li {
+    padding: 9px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.price-card li::before {
+    content: "✓ ";
+    color: #173b6c;
+    font-weight: bold;
+}
+
+.featured {
+    border: 2px solid #2f6fb2;
+    transform: translateY(-8px);
+}
+
+.badge {
+    position: absolute;
+    top: -13px;
+    right: 20px;
+    background: #173b6c;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.note {
+    text-align: center;
+    color: #666;
+    margin-top: 25px;
+}
+
+footer {
+    background: #102b4d;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 30px;
+}
+
+.social-icons {
+    margin-top: 12px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 22px;
+    margin: 0 8px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #8fc4ff;
+}
+
+@media (max-width: 850px) {
+    .steps,
+    .pricing {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    header {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .steps,
+    .pricing {
+        grid-template-columns: 1fr;
+    }
+
+    .featured {
+        transform: none;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+}
