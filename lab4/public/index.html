@@ -1,0 +1,953 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus X1 Pro - Beyond Boundaries</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              darkbg: "#05050A",
+              cardbg: "#0F1019",
+              neonblue: "#3B82F6",
+              neongold: "#F59E0B",
+              neonsilver: "#E2E8F0",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #05050a;
+        color: #f8fafc;
+        overflow-x: hidden;
+      }
+      .glow-effect {
+        box-shadow: 0 0 50px -10px rgba(59, 130, 246, 0.3);
+      }
+      .glow-gold {
+        box-shadow: 0 0 50px -10px rgba(245, 158, 11, 0.3);
+      }
+      .glow-silver {
+        box-shadow: 0 0 50px -10px rgba(226, 232, 240, 0.2);
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-12px) rotate(1deg);
+        }
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      .glass-panel {
+        background: rgba(15, 16, 25, 0.7);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .text-gradient {
+        background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .text-accent-gradient {
+        background: linear-gradient(
+          135deg,
+          #60a5fa 0%,
+          #3b82f6 50%,
+          #818cf8 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-darkbg text-slate-100 selection:bg-blue-500 selection:text-white"
+  >
+    <!-- Navigation Header -->
+    <header
+      class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-white/10 transition-all duration-300"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
+      >
+        <a
+          href="#"
+          class="flex items-center space-x-2 text-2xl font-black tracking-wider"
+        >
+          <i class="fa-solid fa-mobile-screen-button text-blue-500"></i>
+          <span class="text-gradient"
+            >NEXUS <span class="text-blue-500">X1</span></span
+          >
+        </a>
+        <nav
+          class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300"
+        >
+          <a href="#overview" class="hover:text-blue-400 transition"
+            >Overview</a
+          >
+          <a href="#features" class="hover:text-blue-400 transition"
+            >Features</a
+          >
+          <a href="#specs" class="hover:text-blue-400 transition">Tech Specs</a>
+          <a href="#testimonials" class="hover:text-blue-400 transition"
+            >Reviews</a
+          >
+        </nav>
+        <div class="flex items-center space-x-4">
+          <a
+            href="#preorder"
+            class="hidden sm:inline-flex items-center px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-sm shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-105 transition duration-300"
+          >
+            Pre-Order Now
+          </a>
+          <!-- Mobile Menu Button -->
+          <button
+            id="menu-btn"
+            class="md:hidden text-slate-300 hover:text-white text-xl focus:outline-none"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Nav Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden glass-panel border-b border-white/10 px-6 py-4 space-y-3"
+      >
+        <a href="#overview" class="block text-slate-300 hover:text-white py-1"
+          >Overview</a
+        >
+        <a href="#features" class="block text-slate-300 hover:text-white py-1"
+          >Features</a
+        >
+        <a href="#specs" class="block text-slate-300 hover:text-white py-1"
+          >Tech Specs</a
+        >
+        <a
+          href="#testimonials"
+          class="block text-slate-300 hover:text-white py-1"
+          >Reviews</a
+        >
+        <a
+          href="#preorder"
+          class="block text-center w-full py-2.5 rounded-full bg-blue-600 text-white font-semibold"
+          >Pre-Order Now</a
+        >
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="overview"
+      class="relative pt-32 pb-20 md:pt-44 md:pb-32 px-6 flex flex-col items-center justify-center min-h-screen overflow-hidden"
+    >
+      <!-- Glowing Background Orbs -->
+      <div
+        id="hero-glow-bg"
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none transition-all duration-700"
+      ></div>
+      <div
+        class="absolute -top-40 -left-40 w-96 h-96 bg-indigo-600/10 rounded-full blur-[100px] pointer-events-none"
+      ></div>
+
+      <div
+        class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10"
+      >
+        <!-- Hero Text Content -->
+        <div class="lg:col-span-6 text-center lg:text-left space-y-6">
+          <div
+            class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-semibold uppercase tracking-wider"
+          >
+            <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+            Flagship 2026 Edition
+          </div>
+          <h1
+            class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-none text-gradient"
+          >
+            Beyond <br /><span class="text-accent-gradient">Boundaries.</span>
+          </h1>
+          <p
+            class="text-slate-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0"
+          >
+            Engineered with aerospace-grade titanium, quantum-speed processor,
+            and revolutionary 200MP optics. Meet the ultimate mobile experience.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4 pt-2"
+          >
+            <a
+              href="#preorder"
+              class="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-darkbg font-bold shadow-xl hover:bg-slate-200 hover:scale-105 transition duration-300 text-center"
+            >
+              Secure Yours Today
+            </a>
+            <a
+              href="#features"
+              class="w-full sm:w-auto px-8 py-4 rounded-full glass-panel text-white font-semibold hover:bg-white/10 transition duration-300 text-center flex items-center justify-center space-x-2"
+            >
+              <span>Explore Features</span>
+              <i class="fa-solid fa-arrow-down text-xs"></i>
+            </a>
+          </div>
+
+          <!-- Interactive Color Switcher -->
+          <div
+            class="pt-6 flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-6"
+          >
+            <span
+              class="text-xs uppercase tracking-widest text-slate-400 font-semibold"
+              >Available Finishes:</span
+            >
+            <div class="flex items-center space-x-3">
+              <button
+                onclick="changePhoneColor('black')"
+                id="btn-black"
+                class="color-btn w-8 h-8 rounded-full bg-slate-900 border-2 border-blue-500 shadow-md transition transform hover:scale-110 focus:outline-none"
+                title="Titanium Black"
+              ></button>
+              <button
+                onclick="changePhoneColor('silver')"
+                id="btn-silver"
+                class="color-btn w-8 h-8 rounded-full bg-slate-200 border-2 border-transparent shadow-md transition transform hover:scale-110 focus:outline-none"
+                title="Cosmic Silver"
+              ></button>
+              <button
+                onclick="changePhoneColor('gold')"
+                id="btn-gold"
+                class="color-btn w-8 h-8 rounded-full bg-amber-600 border-2 border-transparent shadow-md transition transform hover:scale-110 focus:outline-none"
+                title="Sunset Gold"
+              ></button>
+            </div>
+            <span id="color-name" class="text-sm font-medium text-blue-400"
+              >Titanium Black</span
+            >
+          </div>
+        </div>
+
+        <!-- Hero Product Render (High-End SVG Phone Mockup) -->
+        <div class="lg:col-span-6 flex justify-center">
+          <div
+            class="relative w-[300px] sm:w-[340px] h-[620px] sm:h-[680px] animate-float"
+          >
+            <!-- Phone Frame -->
+            <div
+              id="phone-frame"
+              class="absolute inset-0 rounded-[48px] bg-slate-900 p-3.5 shadow-2xl border-4 border-slate-700/80 glow-effect transition-all duration-500"
+            >
+              <!-- Camera Island / Dynamic Island -->
+              <div
+                class="absolute top-6 left-1/2 -translate-x-1/2 w-28 h-7 bg-black rounded-full z-30 flex items-center justify-between px-3 border border-white/10 shadow-inner"
+              >
+                <div
+                  class="w-3 h-3 rounded-full bg-blue-950/80 border border-blue-500/50 flex items-center justify-center"
+                >
+                  <div
+                    class="w-1 h-1 rounded-full bg-blue-400 animate-ping"
+                  ></div>
+                </div>
+                <div class="w-2.5 h-2.5 rounded-full bg-slate-950"></div>
+              </div>
+
+              <!-- Screen Content -->
+              <div
+                id="phone-screen"
+                class="relative w-full h-full rounded-[38px] bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 overflow-hidden flex flex-col justify-between p-6 transition-all duration-500"
+              >
+                <!-- Screen Header Wallpaper Elements -->
+                <div class="absolute inset-0 opacity-40 pointer-events-none">
+                  <div
+                    class="absolute -top-20 -right-20 w-64 h-64 bg-blue-600 rounded-full blur-3xl"
+                  ></div>
+                  <div
+                    class="absolute bottom-10 -left-10 w-64 h-64 bg-purple-600 rounded-full blur-3xl"
+                  ></div>
+                </div>
+
+                <!-- Clock & Widget -->
+                <div class="pt-10 text-center relative z-10">
+                  <p
+                    class="text-slate-400 text-xs font-semibold tracking-widest uppercase"
+                  >
+                    Nexus OS 16
+                  </p>
+                  <h2
+                    class="text-5xl font-black text-white tracking-tight mt-1"
+                  >
+                    09:41
+                  </h2>
+                  <p class="text-xs text-blue-400 font-medium mt-1">
+                    Tuesday, September 29
+                  </p>
+                </div>
+
+                <!-- Interactive Screen Widget / Camera Preview Simulation -->
+                <div
+                  class="relative z-10 glass-panel rounded-2xl p-4 border border-white/10 backdrop-blur-md"
+                >
+                  <div class="flex items-center justify-between mb-2">
+                    <div class="flex items-center space-x-2">
+                      <i class="fa-solid fa-camera text-blue-400"></i>
+                      <span class="text-xs font-bold text-slate-200"
+                        >200MP Quantum Lens</span
+                      >
+                    </div>
+                    <span
+                      class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-semibold"
+                      >PRO MODE</span
+                    >
+                  </div>
+                  <div
+                    class="h-24 rounded-lg bg-slate-950/60 border border-white/5 flex items-center justify-center relative overflow-hidden"
+                  >
+                    <!-- Simulated Camera Grid -->
+                    <div
+                      class="absolute inset-0 grid grid-cols-3 grid-rows-3 opacity-20 pointer-events-none"
+                    >
+                      <div class="border-r border-b border-white"></div>
+                      <div class="border-r border-b border-white"></div>
+                      <div class="border-b border-white"></div>
+                      <div class="border-r border-b border-white"></div>
+                      <div class="border-r border-b border-white"></div>
+                      <div class="border-b border-white"></div>
+                      <div class="border-r border-white"></div>
+                      <div class="border-r border-white"></div>
+                      <div></div>
+                    </div>
+                    <div class="text-center z-10">
+                      <i
+                        class="fa-solid fa-mountain-sun text-2xl text-blue-400 mb-1"
+                      ></i>
+                      <p class="text-[10px] text-slate-300">
+                        Ultra-HD AI Stabilization Active
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Screen Footer / Battery -->
+                <div
+                  class="relative z-10 flex items-center justify-between text-xs text-slate-400 pb-2"
+                >
+                  <div class="flex items-center space-x-1.5">
+                    <i class="fa-solid fa-wifi text-white"></i>
+                    <span>5G+</span>
+                  </div>
+                  <div class="flex items-center space-x-1.5">
+                    <span>98%</span>
+                    <i class="fa-solid fa-battery-full text-emerald-400"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Highlight Bar -->
+    <section
+      class="border-y border-white/10 bg-cardbg/40 backdrop-blur-md py-10"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
+      >
+        <div class="space-y-1">
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-white">6.8"</h3>
+          <p class="text-xs sm:text-sm text-slate-400 font-medium">
+            Ultra-Retina 144Hz OLED
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-blue-400">
+            200MP
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-400 font-medium">
+            Quad-Camera System
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-white">48 hrs</h3>
+          <p class="text-xs sm:text-sm text-slate-400 font-medium">
+            All-Day Intelligent Battery
+          </p>
+        </div>
+        <div class="space-y-1">
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-indigo-400">
+            A19 Pro
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-400 font-medium">
+            3nm Quantum Chip
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature Showcase Grid -->
+    <section id="features" class="py-24 px-6 relative">
+      <div class="max-w-7xl mx-auto space-y-16">
+        <div class="text-center space-y-4 max-w-2xl mx-auto">
+          <h2 class="text-xs uppercase tracking-widest text-blue-400 font-bold">
+            Unmatched Engineering
+          </h2>
+          <h3
+            class="text-3xl sm:text-5xl font-black tracking-tight text-gradient"
+          >
+            Designed to Astound. Built to Last.
+          </h3>
+          <p class="text-slate-400 text-sm sm:text-base">
+            Every element has been reimagined to give you the most powerful,
+            immersive smartphone ever created.
+          </p>
+        </div>
+
+        <!-- Grid Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div
+            class="glass-panel p-8 rounded-3xl relative group hover:border-blue-500/50 transition duration-300"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-2xl mb-6 group-hover:scale-110 transition duration-300"
+            >
+              <i class="fa-solid fa-display"></i>
+            </div>
+            <h4 class="text-xl font-bold text-white mb-3">
+              Ultra-Retina 144Hz Display
+            </h4>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Immerse yourself in true blacks and vibrant 3,000-nit peak
+              brightness. Adaptive refresh rate scales smoothly from 1Hz to
+              144Hz.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div
+            class="glass-panel p-8 rounded-3xl relative group hover:border-blue-500/50 transition duration-300"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-2xl mb-6 group-hover:scale-110 transition duration-300"
+            >
+              <i class="fa-solid fa-camera-retro"></i>
+            </div>
+            <h4 class="text-xl font-bold text-white mb-3">
+              200MP Studio Camera
+            </h4>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Capture microscopic details and breathtaking astrophotography with
+              our largest sensor and AI-powered multi-frame processing.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div
+            class="glass-panel p-8 rounded-3xl relative group hover:border-blue-500/50 transition duration-300"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-2xl mb-6 group-hover:scale-110 transition duration-300"
+            >
+              <i class="fa-solid fa-battery-bolt"></i>
+            </div>
+            <h4 class="text-xl font-bold text-white mb-3">
+              48-Hour Intelligent Battery
+            </h4>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Power through two full days of heavy usage. 120W HyperCharge
+              brings your phone from 0% to 80% in just 15 minutes.
+            </p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div
+            class="glass-panel p-8 rounded-3xl relative group hover:border-blue-500/50 transition duration-300"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-2xl mb-6 group-hover:scale-110 transition duration-300"
+            >
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <h4 class="text-xl font-bold text-white mb-3">
+              A19 Pro Quantum Chip
+            </h4>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Built on a groundbreaking 3nm process. Experience desktop-grade
+              gaming and real-time neural translation without lag.
+            </p>
+          </div>
+
+          <!-- Feature 5 -->
+          <div
+            class="glass-panel p-8 rounded-3xl relative group hover:border-blue-500/50 transition duration-300"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-2xl mb-6 group-hover:scale-110 transition duration-300"
+            >
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h4 class="text-xl font-bold text-white mb-3">
+              Titanium Armor & IP68
+            </h4>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Aerospace-grade titanium frame offers superior durability while
+              remaining remarkably lightweight. Water resistant up to 10 meters.
+            </p>
+          </div>
+
+          <!-- Feature 6 -->
+          <div
+            class="glass-panel p-8 rounded-3xl relative group hover:border-blue-500/50 transition duration-300"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-2xl mb-6 group-hover:scale-110 transition duration-300"
+            >
+              <i class="fa-solid fa-satellite-dish"></i>
+            </div>
+            <h4 class="text-xl font-bold text-white mb-3">
+              Global Satellite Link
+            </h4>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Never lose touch. Send encrypted SOS messages and location pings
+              even when completely outside cellular coverage areas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Specs Section -->
+    <section
+      id="specs"
+      class="py-24 px-6 bg-cardbg/20 border-t border-white/10"
+    >
+      <div class="max-w-5xl mx-auto space-y-12">
+        <div class="text-center space-y-4">
+          <h2 class="text-xs uppercase tracking-widest text-blue-400 font-bold">
+            Technical Specifications
+          </h2>
+          <h3 class="text-3xl sm:text-4xl font-black text-white">
+            At a Glance
+          </h3>
+        </div>
+
+        <div
+          class="glass-panel rounded-3xl overflow-hidden border border-white/10 shadow-2xl"
+        >
+          <div class="divide-y divide-white/10">
+            <div
+              class="grid grid-cols-1 md:grid-cols-3 p-6 sm:p-8 hover:bg-white/5 transition"
+            >
+              <span class="text-slate-400 font-medium">Display</span>
+              <span class="md:col-span-2 text-white font-semibold mt-1 md:mt-0"
+                >6.8-inch Ultra-Retina OLED, 144Hz Adaptive Refresh, 3,000 nits
+                Peak Brightness, Corning Gorilla Armor</span
+              >
+            </div>
+            <div
+              class="grid grid-cols-1 md:grid-cols-3 p-6 sm:p-8 hover:bg-white/5 transition"
+            >
+              <span class="text-slate-400 font-medium">Processor</span>
+              <span class="md:col-span-2 text-white font-semibold mt-1 md:mt-0"
+                >Nexus A19 Pro 3nm Chipset with 16-Core Neural Engine & Hardware
+                Ray Tracing</span
+              >
+            </div>
+            <div
+              class="grid grid-cols-1 md:grid-cols-3 p-6 sm:p-8 hover:bg-white/5 transition"
+            >
+              <span class="text-slate-400 font-medium">Camera System</span>
+              <span class="md:col-span-2 text-white font-semibold mt-1 md:mt-0"
+                >200MP Main (f/1.6) + 50MP Ultra-Wide + 50MP Periscope Telephoto
+                (10x Optical Zoom)</span
+              >
+            </div>
+            <div
+              class="grid grid-cols-1 md:grid-cols-3 p-6 sm:p-8 hover:bg-white/5 transition"
+            >
+              <span class="text-slate-400 font-medium">Battery & Charging</span>
+              <span class="md:col-span-2 text-white font-semibold mt-1 md:mt-0"
+                >5,500 mAh Silicon-Carbon Battery, 120W Wired HyperCharge, 50W
+                Wireless Fast Charge</span
+              >
+            </div>
+            <div
+              class="grid grid-cols-1 md:grid-cols-3 p-6 sm:p-8 hover:bg-white/5 transition"
+            >
+              <span class="text-slate-400 font-medium">Build & Security</span>
+              <span class="md:col-span-2 text-white font-semibold mt-1 md:mt-0"
+                >Grade 5 Titanium Chassis, IP68 Dust/Water Resistance,
+                Ultrasonic In-Display Fingerprint</span
+              >
+            </div>
+            <div
+              class="grid grid-cols-1 md:grid-cols-3 p-6 sm:p-8 hover:bg-white/5 transition"
+            >
+              <span class="text-slate-400 font-medium">Connectivity</span>
+              <span class="md:col-span-2 text-white font-semibold mt-1 md:mt-0"
+                >5G Advanced, Wi-Fi 7, Bluetooth 6.0, Dual eSIM + Nano SIM,
+                Two-Way Satellite SOS</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 px-6 relative">
+      <div class="max-w-7xl mx-auto space-y-16">
+        <div class="text-center space-y-4">
+          <h2 class="text-xs uppercase tracking-widest text-blue-400 font-bold">
+            Expert Reviews
+          </h2>
+          <h3 class="text-3xl sm:text-5xl font-black text-gradient">
+            Loved by Tech Leaders
+          </h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Review 1 -->
+          <div
+            class="glass-panel p-8 rounded-3xl flex flex-col justify-between space-y-6"
+          >
+            <div class="space-y-4">
+              <div class="flex text-amber-400 text-sm space-x-1">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                "The camera system on the Nexus X1 Pro is nothing short of
+                revolutionary. Low-light detail rivals professional DSLR rigs."
+              </p>
+            </div>
+            <div
+              class="flex items-center space-x-4 pt-4 border-t border-white/10"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-blue-600/30 flex items-center justify-center font-bold text-blue-400"
+              >
+                MK
+              </div>
+              <div>
+                <h5 class="text-white font-semibold text-sm">Marques Vance</h5>
+                <p class="text-xs text-slate-400">Tech Reviewer & Creator</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div
+            class="glass-panel p-8 rounded-3xl flex flex-col justify-between space-y-6"
+          >
+            <div class="space-y-4">
+              <div class="flex text-amber-400 text-sm space-x-1">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                "Battery life has always been a compromise on flagships—until
+                now. Getting two full days on heavy workflows is unbelievable."
+              </p>
+            </div>
+            <div
+              class="flex items-center space-x-4 pt-4 border-t border-white/10"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-indigo-600/30 flex items-center justify-center font-bold text-indigo-400"
+              >
+                SL
+              </div>
+              <div>
+                <h5 class="text-white font-semibold text-sm">Sarah Lin</h5>
+                <p class="text-xs text-slate-400">Editor-in-Chief, GadgetLab</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div
+            class="glass-panel p-8 rounded-3xl flex flex-col justify-between space-y-6"
+          >
+            <div class="space-y-4">
+              <div class="flex text-amber-400 text-sm space-x-1">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                "The titanium build feels incredible in hand. Lightweight yet
+                robust. The A19 Pro chip eats demanding 3D games for breakfast."
+              </p>
+            </div>
+            <div
+              class="flex items-center space-x-4 pt-4 border-t border-white/10"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-emerald-600/30 flex items-center justify-center font-bold text-emerald-400"
+              >
+                DA
+              </div>
+              <div>
+                <h5 class="text-white font-semibold text-sm">David Alpert</h5>
+                <p class="text-xs text-slate-400">Mobile Gaming Weekly</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pre-Order & Email Sign-up Section -->
+    <section
+      id="preorder"
+      class="py-24 px-6 relative bg-gradient-to-b from-darkbg to-cardbg/40 border-t border-white/10"
+    >
+      <div
+        class="max-w-4xl mx-auto glass-panel p-8 sm:p-14 rounded-[36px] relative overflow-hidden shadow-2xl border border-white/10"
+      >
+        <!-- Background glow -->
+        <div
+          class="absolute -top-24 -right-24 w-80 h-80 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"
+        ></div>
+
+        <div class="text-center space-y-6 relative z-10 max-w-xl mx-auto">
+          <div
+            class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-semibold uppercase tracking-wider"
+          >
+            Limited First Batch
+          </div>
+          <h3 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+            Secure Your Nexus X1 Pro
+          </h3>
+          <p class="text-slate-300 text-sm sm:text-base">
+            Pre-order today and receive exclusive VIP perks including free
+            wireless earbuds, 2-year accidental damage coverage, and priority
+            shipping.
+          </p>
+
+          <!-- Interactive Form -->
+          <form
+            id="preorder-form"
+            onsubmit="handlePreorder(event)"
+            class="space-y-4 pt-4"
+          >
+            <div class="flex flex-col sm:flex-row gap-3">
+              <input
+                type="email"
+                id="email-input"
+                required
+                placeholder="Enter your email address..."
+                class="flex-1 px-6 py-4 rounded-2xl bg-slate-950/80 border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 transition"
+              />
+              <button
+                type="submit"
+                class="px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-sm shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 hover:scale-105 transition duration-300"
+              >
+                Reserve Now
+              </button>
+            </div>
+            <p class="text-xs text-slate-500">
+              No commitment required. Cancel anytime before official launch.
+            </p>
+          </form>
+
+          <!-- Success Feedback Message Box -->
+          <div
+            id="success-message"
+            class="hidden p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-medium animate-fade-in flex items-center justify-center space-x-2"
+          >
+            <i class="fa-solid fa-circle-check text-lg"></i>
+            <span
+              >Success! Your VIP pre-order reservation has been locked in. Check
+              your inbox for details.</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="border-t border-white/10 py-12 px-6 bg-darkbg text-slate-500 text-sm"
+    >
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-12"
+      >
+        <div class="space-y-4">
+          <a
+            href="#"
+            class="flex items-center space-x-2 text-xl font-black tracking-wider text-white"
+          >
+            <i class="fa-solid fa-mobile-screen-button text-blue-500"></i>
+            <span>NEXUS <span class="text-blue-500">X1</span></span>
+          </a>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Pushing the boundaries of mobile technology, design, and
+            performance.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-4">Products</h4>
+          <ul class="space-y-2 text-xs">
+            <li>
+              <a href="#" class="hover:text-white transition">Nexus X1 Pro</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition">Nexus X1 Ultra</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition">Nexus Buds Pro</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition">Accessories</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-4">Support</h4>
+          <ul class="space-y-2 text-xs">
+            <li>
+              <a href="#" class="hover:text-white transition">Order Status</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition"
+                >Warranty & Repairs</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition"
+                >Device Trade-In</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-4">Stay Connected</h4>
+          <div class="flex space-x-4 text-lg">
+            <a href="#" class="hover:text-blue-400 transition"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a href="#" class="hover:text-blue-400 transition"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-blue-400 transition"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+            <a href="#" class="hover:text-blue-400 transition"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-xs"
+      >
+        <p>&copy; 2026 Nexus Technologies Inc. All rights reserved.</p>
+        <div class="flex space-x-6 mt-4 sm:mt-0">
+          <a href="#" class="hover:text-white transition">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript Interactions -->
+    <script>
+      // Mobile Menu Toggle
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Color Switcher Logic
+      function changePhoneColor(color) {
+        const frame = document.getElementById("phone-frame");
+        const screen = document.getElementById("phone-screen");
+        const glow = document.getElementById("hero-glow-bg");
+        const colorName = document.getElementById("color-name");
+        const btnBlack = document.getElementById("btn-black");
+        const btnSilver = document.getElementById("btn-silver");
+        const btnGold = document.getElementById("btn-gold");
+
+        // Reset borders
+        btnBlack.className =
+          "color-btn w-8 h-8 rounded-full bg-slate-900 border-2 border-transparent shadow-md transition transform hover:scale-110 focus:outline-none";
+        btnSilver.className =
+          "color-btn w-8 h-8 rounded-full bg-slate-200 border-2 border-transparent shadow-md transition transform hover:scale-110 focus:outline-none";
+        btnGold.className =
+          "color-btn w-8 h-8 rounded-full bg-amber-600 border-2 border-transparent shadow-md transition transform hover:scale-110 focus:outline-none";
+
+        if (color === "black") {
+          frame.className =
+            "absolute inset-0 rounded-[48px] bg-slate-900 p-3.5 shadow-2xl border-4 border-slate-700/80 glow-effect transition-all duration-500";
+          screen.className =
+            "relative w-full h-full rounded-[38px] bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 overflow-hidden flex flex-col justify-between p-6 transition-all duration-500";
+          glow.className =
+            "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none transition-all duration-700";
+          colorName.innerText = "Titanium Black";
+          btnBlack.classList.add("border-blue-500");
+        } else if (color === "silver") {
+          frame.className =
+            "absolute inset-0 rounded-[48px] bg-slate-200 p-3.5 shadow-2xl border-4 border-white glow-silver transition-all duration-500";
+          screen.className =
+            "relative w-full h-full rounded-[38px] bg-gradient-to-br from-slate-900 via-slate-800 to-blue-950 overflow-hidden flex flex-col justify-between p-6 transition-all duration-500";
+          glow.className =
+            "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-slate-400/20 rounded-full blur-[120px] pointer-events-none transition-all duration-700";
+          colorName.innerText = "Cosmic Silver";
+          btnSilver.classList.add("border-blue-500");
+        } else if (color === "gold") {
+          frame.className =
+            "absolute inset-0 rounded-[48px] bg-amber-700 p-3.5 shadow-2xl border-4 border-amber-500/80 glow-gold transition-all duration-500";
+          screen.className =
+            "relative w-full h-full rounded-[38px] bg-gradient-to-br from-slate-950 via-slate-900 to-amber-950 overflow-hidden flex flex-col justify-between p-6 transition-all duration-500";
+          glow.className =
+            "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-600/20 rounded-full blur-[120px] pointer-events-none transition-all duration-700";
+          colorName.innerText = "Sunset Gold";
+          btnGold.classList.add("border-blue-500");
+        }
+      }
+
+      // Pre-order Form Handler with Success Feedback
+      function handlePreorder(e) {
+        e.preventDefault();
+        const emailInput = document.getElementById("email-input");
+        const successMsg = document.getElementById("success-message");
+        const form = document.getElementById("preorder-form");
+
+        if (emailInput.value.trim() !== "") {
+          form.style.display = "none";
+          successMsg.classList.remove("hidden");
+        }
+      }
+    </script>
+  </body>
+</html>
