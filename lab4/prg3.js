@@ -6,18 +6,11 @@ const app = express();
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(dirname, "htmlPages","index.html"));
-});
-
-
-app.get("/about", (req, res) => {
-  res.sendFile(path.join(dirname, "htmlPages","about.html"));
-});
-
+app.use(express.static(path.join(dirname, "public")));
 
 app.use((req, res) => {
   res.status(404).json("page not found");
 });
 
-app.listen(4444, () => console.log("prg2 is running")); 
+app.listen(5555, () => console.log("prg3 is running"));
+
