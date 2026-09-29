@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Nexus Technologies</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              darkbg: "#05050A",
+              cardbg: "#0F1019",
+              neonblue: "#3B82F6",
+              neongold: "#F59E0B",
+              neonsilver: "#E2E8F0",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #05050a;
+        color: #f8fafc;
+        overflow-x: hidden;
+      }
+      .glow-effect {
+        box-shadow: 0 0 50px -10px rgba(59, 130, 246, 0.25);
+      }
+      .glass-panel {
+        background: rgba(15, 16, 25, 0.7);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .text-gradient {
+        background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .text-accent-gradient {
+        background: linear-gradient(
+          135deg,
+          #60a5fa 0%,
+          #3b82f6 50%,
+          #818cf8 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-darkbg text-slate-100 selection:bg-blue-500 selection:text-white"
+  >
+    <!-- Navigation Header -->
+    <header
+      class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-white/10 transition-all duration-300"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
+      >
+        <a
+          href="index.html"
+          class="flex items-center space-x-2 text-2xl font-black tracking-wider"
+        >
+          <i class="fa-solid fa-mobile-screen-button text-blue-500"></i>
+          <span class="text-gradient"
+            >NEXUS <span class="text-blue-500">X1</span></span
+          >
+        </a>
+        <nav
+          class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300"
+        >
+          <a href="index.html#overview" class="hover:text-blue-400 transition"
+            >Overview</a
+          >
+          <a href="index.html#features" class="hover:text-blue-400 transition"
+            >Features</a
+          >
+          <a href="about.html" class="text-blue-400 transition font-semibold"
+            >About Us</a
+          >
+          <a href="index.html#specs" class="hover:text-blue-400 transition"
+            >Tech Specs</a
+          >
+        </nav>
+        <div class="flex items-center space-x-4">
+          <a
+            href="index.html#preorder"
+            class="hidden sm:inline-flex items-center px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-sm shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-105 transition duration-300"
+          >
+            Pre-Order X1 Pro
+          </a>
+          <!-- Mobile Menu Button -->
+          <button
+            id="menu-btn"
+            class="md:hidden text-slate-300 hover:text-white text-xl focus:outline-none"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Nav Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden glass-panel border-b border-white/10 px-6 py-4 space-y-3"
+      >
+        <a
+          href="index.html#overview"
+          class="block text-slate-300 hover:text-white py-1"
+          >Overview</a
+        >
+        <a
+          href="index.html#features"
+          class="block text-slate-300 hover:text-white py-1"
+          >Features</a
+        >
+        <a href="about.html" class="block text-blue-400 font-semibold py-1"
+          >About Us</a
+        >
+        <a
+          href="index.html#specs"
+          class="block text-slate-300 hover:text-white py-1"
+          >Tech Specs</a
+        >
+        <a
+          href="index.html#preorder"
+          class="block text-center w-full py-2.5 rounded-full bg-blue-600 text-white font-semibold"
+          >Pre-Order X1 Pro</a
+        >
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="relative pt-36 pb-20 md:pt-48 md:pb-32 px-6 flex flex-col items-center justify-center overflow-hidden"
+    >
+      <div
+        class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/15 rounded-full blur-[140px] pointer-events-none"
+      ></div>
+
+      <div class="max-w-4xl mx-auto text-center space-y-6 relative z-10">
+        <div
+          class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-semibold uppercase tracking-wider"
+        >
+          <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+          Our Vision & Mission
+        </div>
+        <h1
+          class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-none text-gradient"
+        >
+          Reinventing How Humanity <br /><span class="text-accent-gradient"
+            >Connects.</span
+          >
+        </h1>
+        <p
+          class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed"
+        >
+          At Nexus, we believe technology should dissolve barriers, amplify
+          human potential, and exist in absolute harmony with elegance and raw
+          performance.
+        </p>
+      </div>
+    </section>
+
+    <!-- Mission & Vision Split Cards -->
+    <section class="py-16 px-6">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div
+          class="glass-panel p-10 rounded-3xl relative overflow-hidden group hover:border-blue-500/40 transition"
+        >
+          <div
+            class="absolute top-0 right-0 p-8 text-blue-500/20 text-6xl group-hover:scale-110 transition"
+          >
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+          <div
+            class="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-xl mb-6"
+          >
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-4">Our Mission</h3>
+          <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+            To craft uncompromising mobile masterpieces that empower creators,
+            professionals, and visionaries worldwide. By fusing aerospace-grade
+            materials with revolutionary 3nm chipsets and studio-grade cameras,
+            we turn the impossible into everyday reality.
+          </p>
+        </div>
+
+        <div
+          class="glass-panel p-10 rounded-3xl relative overflow-hidden group hover:border-indigo-500/40 transition"
+        >
+          <div
+            class="absolute top-0 right-0 p-8 text-indigo-500/20 text-6xl group-hover:scale-110 transition"
+          >
+            <i class="fa-solid fa-eye"></i>
+          </div>
+          <div
+            class="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-xl mb-6"
+          >
+            <i class="fa-solid fa-compass"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-4">Our Vision</h3>
+          <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+            A future where communication is instantaneous, planetary
+            connectivity is seamless via satellite links, and personal devices
+            act as an intuitive extension of human consciousness and creativity.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Journey Timeline -->
+    <section class="py-24 px-6 relative bg-cardbg/20 border-y border-white/10">
+      <div class="max-w-5xl mx-auto space-y-16">
+        <div class="text-center space-y-4">
+          <h2 class="text-xs uppercase tracking-widest text-blue-400 font-bold">
+            Evolutionary Milestones
+          </h2>
+          <h3 class="text-3xl sm:text-5xl font-black text-gradient">
+            The Nexus Journey
+          </h3>
+        </div>
+
+        <!-- Timeline Container -->
+        <div
+          class="relative border-l-2 border-blue-500/30 ml-4 md:ml-32 space-y-12"
+        >
+          <!-- Milestone 1 -->
+          <div class="relative pl-8 sm:pl-12 group">
+            <div
+              class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-blue-500 border-4 border-darkbg group-hover:scale-125 transition"
+            ></div>
+            <div
+              class="text-xs font-bold text-blue-400 tracking-widest uppercase mb-1"
+            >
+              2022 - Foundation
+            </div>
+            <h4 class="text-xl font-bold text-white mb-2">
+              Inception in Silicon Valley
+            </h4>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Founded by a collective of ex-aerospace engineers and optical
+              scientists with a single goal: shatter the limits of smartphone
+              architecture.
+            </p>
+          </div>
+
+          <!-- Milestone 2 -->
+          <div class="relative pl-8 sm:pl-12 group">
+            <div
+              class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-blue-500 border-4 border-darkbg group-hover:scale-125 transition"
+            ></div>
+            <div
+              class="text-xs font-bold text-blue-400 tracking-widest uppercase mb-1"
+            >
+              2024 - Breakthrough
+            </div>
+            <h4 class="text-xl font-bold text-white mb-2">
+              Quantum 3nm Chip Architecture
+            </h4>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Successfully patented our proprietary low-power neural processing
+              unit, paving the way for desktop-class performance in mobile form
+              factors.
+            </p>
+          </div>
+
+          <!-- Milestone 3 -->
+          <div class="relative pl-8 sm:pl-12 group">
+            <div
+              class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-blue-500 border-4 border-darkbg group-hover:scale-125 transition"
+            ></div>
+            <div
+              class="text-xs font-bold text-blue-400 tracking-widest uppercase mb-1"
+            >
+              2025 - Global R&D
+            </div>
+            <h4 class="text-xl font-bold text-white mb-2">
+              Global Design Labs Opened
+            </h4>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Expanded design and optics research centers across Tokyo, Zurich,
+              and Cupertino to integrate titanium craftsmanship with precision
+              lens engineering.
+            </p>
+          </div>
+
+          <!-- Milestone 4 -->
+          <div class="relative pl-8 sm:pl-12 group">
+            <div
+              class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-blue-500 border-4 border-darkbg group-hover:scale-125 transition"
+            ></div>
+            <div
+              class="text-xs font-bold text-blue-400 tracking-widest uppercase mb-1"
+            >
+              2026 - Flagship Release
+            </div>
+            <h4 class="text-xl font-bold text-white mb-2">
+              Launch of Nexus X1 Pro
+            </h4>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Unveiled the world's most advanced flagship mobile device
+              featuring 200MP quantum optics, satellite SOS, and 48-hour battery
+              longevity.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Company Values -->
+    <section class="py-24 px-6">
+      <div class="max-w-7xl mx-auto space-y-16">
+        <div class="text-center space-y-4 max-w-2xl mx-auto">
+          <h2 class="text-xs uppercase tracking-widest text-blue-400 font-bold">
+            What Drives Us
+          </h2>
+          <h3 class="text-3xl sm:text-5xl font-black text-gradient">
+            Our Core Values
+          </h3>
+          <p class="text-slate-400 text-sm sm:text-base">
+            The unwavering principles that guide every chip we design and every
+            line of code we write.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Value 1 -->
+          <div
+            class="glass-panel p-8 rounded-3xl space-y-4 hover:border-blue-500/50 transition"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-2xl"
+            >
+              <i class="fa-solid fa-feather"></i>
+            </div>
+            <h4 class="text-xl font-bold text-white">
+              Uncompromising Elegance
+            </h4>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              We believe true luxury is born from absolute simplicity. Every
+              curve and finish is meticulously optimized for touch and sight.
+            </p>
+          </div>
+
+          <!-- Value 2 -->
+          <div
+            class="glass-panel p-8 rounded-3xl space-y-4 hover:border-blue-500/50 transition"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-2xl"
+            >
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <h4 class="text-xl font-bold text-white">Relentless Innovation</h4>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              We never settle for industry standards. If a component doesn't
+              exist to achieve our vision, we invent it from scratch.
+            </p>
+          </div>
+
+          <!-- Value 3 -->
+          <div
+            class="glass-panel p-8 rounded-3xl space-y-4 hover:border-blue-500/50 transition"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-2xl"
+            >
+              <i class="fa-solid fa-earth-americas"></i>
+            </div>
+            <h4 class="text-xl font-bold text-white">Sustainable Future</h4>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Using 100% recycled aerospace titanium and zero-plastic packaging
+              to ensure premium tech respects our planet.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership Team Profiles -->
+    <section class="py-24 px-6 bg-cardbg/30 border-t border-white/10">
+      <div class="max-w-7xl mx-auto space-y-16">
+        <div class="text-center space-y-4">
+          <h2 class="text-xs uppercase tracking-widest text-blue-400 font-bold">
+            The Minds Behind Nexus
+          </h2>
+          <h3 class="text-3xl sm:text-5xl font-black text-gradient">
+            Executive Leadership
+          </h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Leader 1 -->
+          <div
+            class="glass-panel rounded-3xl overflow-hidden group hover:border-blue-500/50 transition"
+          >
+            <div
+              class="h-72 bg-gradient-to-br from-slate-900 to-indigo-950 relative overflow-hidden flex items-center justify-center"
+            >
+              <div
+                class="absolute inset-0 bg-blue-600/15 group-hover:scale-105 transition duration-500"
+              ></div>
+              <i class="fa-solid fa-user-tie text-7xl text-slate-700/80"></i>
+              <div class="absolute bottom-4 left-4 right-4 text-center">
+                <span
+                  class="text-xs px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 font-semibold backdrop-blur-md"
+                  >Founder & CEO</span
+                >
+              </div>
+            </div>
+            <div class="p-8 space-y-3">
+              <h4 class="text-xl font-bold text-white">Dr. Elena Vance</h4>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                Former quantum physicist and lead hardware architect. Elena
+                steers Nexus toward category-defining breakthroughs.
+              </p>
+            </div>
+          </div>
+
+          <!-- Leader 2 -->
+          <div
+            class="glass-panel rounded-3xl overflow-hidden group hover:border-blue-500/50 transition"
+          >
+            <div
+              class="h-72 bg-gradient-to-br from-slate-900 to-blue-950 relative overflow-hidden flex items-center justify-center"
+            >
+              <div
+                class="absolute inset-0 bg-indigo-600/15 group-hover:scale-105 transition duration-500"
+              ></div>
+              <i
+                class="fa-solid fa-user-astronaut text-7xl text-slate-700/80"
+              ></i>
+              <div class="absolute bottom-4 left-4 right-4 text-center">
+                <span
+                  class="text-xs px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-400 font-semibold backdrop-blur-md"
+                  >Chief Technology Officer</span
+                >
+              </div>
+            </div>
+            <div class="p-8 space-y-3">
+              <h4 class="text-xl font-bold text-white">Marcus Sterling</h4>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                Pioneer in 3nm processor architecture and neural machine
+                learning frameworks.
+              </p>
+            </div>
+          </div>
+
+          <!-- Leader 3 -->
+          <div
+            class="glass-panel rounded-3xl overflow-hidden group hover:border-blue-500/50 transition"
+          >
+            <div
+              class="h-72 bg-gradient-to-br from-slate-900 to-purple-950 relative overflow-hidden flex items-center justify-center"
+            >
+              <div
+                class="absolute inset-0 bg-purple-600/15 group-hover:scale-105 transition duration-500"
+              ></div>
+              <i class="fa-solid fa-user-gear text-7xl text-slate-700/80"></i>
+              <div class="absolute bottom-4 left-4 right-4 text-center">
+                <span
+                  class="text-xs px-3 py-1 rounded-full bg-purple-500/20 text-purple-400 font-semibold backdrop-blur-md"
+                  >VP of Industrial Design</span
+                >
+              </div>
+            </div>
+            <div class="p-8 space-y-3">
+              <h4 class="text-xl font-bold text-white">Aria Katsu</h4>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                Award-winning minimalist industrial designer focused on tactile
+                perfection and aerospace alloys.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join Us / Newsletter Section -->
+    <section
+      class="py-24 px-6 relative bg-gradient-to-b from-darkbg to-cardbg/40 border-t border-white/10"
+    >
+      <div
+        class="max-w-4xl mx-auto glass-panel p-8 sm:p-14 rounded-[36px] relative overflow-hidden shadow-2xl border border-white/10 text-center space-y-6"
+      >
+        <div
+          class="absolute -top-24 -left-24 w-80 h-80 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"
+        ></div>
+
+        <div
+          class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-semibold uppercase tracking-wider"
+        >
+          Shape The Future
+        </div>
+        <h3 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+          Join the Nexus Community
+        </h3>
+        <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto">
+          Subscribe to our newsletter for behind-the-scenes engineering deep
+          dives, early event invites, and priority device allocation.
+        </p>
+
+        <form
+          id="newsletter-form"
+          onsubmit="handleNewsletter(event)"
+          class="space-y-4 pt-2 max-w-md mx-auto"
+        >
+          <div class="flex flex-col sm:flex-row gap-3">
+            <input
+              type="email"
+              id="newsletter-email"
+              required
+              placeholder="Enter your email..."
+              class="flex-1 px-6 py-4 rounded-2xl bg-slate-950/80 border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 transition"
+            />
+            <button
+              type="submit"
+              class="px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-sm shadow-lg shadow-blue-500/30 hover:scale-105 transition duration-300"
+            >
+              Subscribe
+            </button>
+          </div>
+        </form>
+
+        <div
+          id="newsletter-success"
+          class="hidden p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-medium flex items-center justify-center space-x-2"
+        >
+          <i class="fa-solid fa-circle-check text-lg"></i>
+          <span
+            >You are now part of the Nexus inner circle! Check your inbox
+            soon.</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="border-t border-white/10 py-12 px-6 bg-darkbg text-slate-500 text-sm"
+    >
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-12"
+      >
+        <div class="space-y-4">
+          <a
+            href="index.html"
+            class="flex items-center space-x-2 text-xl font-black tracking-wider text-white"
+          >
+            <i class="fa-solid fa-mobile-screen-button text-blue-500"></i>
+            <span>NEXUS <span class="text-blue-500">X1</span></span>
+          </a>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Pushing the boundaries of mobile technology, design, and
+            performance.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-4">Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li>
+              <a href="index.html" class="hover:text-white transition"
+                >Home / Overview</a
+              >
+            </li>
+            <li>
+              <a href="about.html" class="hover:text-white transition"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a href="index.html#features" class="hover:text-white transition"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a href="index.html#specs" class="hover:text-white transition"
+                >Tech Specs</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-4">Support</h4>
+          <ul class="space-y-2 text-xs">
+            <li>
+              <a href="#" class="hover:text-white transition">Order Status</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition"
+                >Warranty & Repairs</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-white transition">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-4">Stay Connected</h4>
+          <div class="flex space-x-4 text-lg">
+            <a href="#" class="hover:text-blue-400 transition"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a href="#" class="hover:text-blue-400 transition"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-blue-400 transition"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+            <a href="#" class="hover:text-blue-400 transition"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-7xl mx-auto pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-xs"
+      >
+        <p>&copy; 2026 Nexus Technologies Inc. All rights reserved.</p>
+        <div class="flex space-x-6 mt-4 sm:mt-0">
+          <a href="#" class="hover:text-white transition">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      // Mobile Menu Toggle
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Newsletter Form Handler
+      function handleNewsletter(e) {
+        e.preventDefault();
+        const form = document.getElementById("newsletter-form");
+        const successDiv = document.getElementById("newsletter-success");
+        const emailInput = document.getElementById("newsletter-email");
+
+        if (emailInput.value.trim() !== "") {
+          form.style.display = "none";
+          successDiv.classList.remove("hidden");
+        }
+      }
+    </script>
+  </body>
+</html>

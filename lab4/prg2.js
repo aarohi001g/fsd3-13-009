@@ -7,8 +7,14 @@ const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(dirname, "index.html"));
+  res.sendFile(path.join(dirname, "public","index.html"));
 });
+
+
+app.get("/about", (req, res) => {
+  res.sendFile(path.join(dirname, "public","about.html"));
+});
+
 
 app.use((req, res) => {
   res.status(404).json("page not found");
