@@ -18,10 +18,16 @@ app.get("/api/products", (req, res) => {
 });
 //QUERY STRING / request query must be before req parameter or dynamic url
 app.get("/api/products/query",(req,res)=>{
-    const {search,limit}=req.query;
+    const {search,limit, mp}=req.query;
     console.log("search:",search);
     console.log("limit:",limit);
     let sortedProducts = [...products];
+
+    if(mp){
+        sortedProducts = sortedProducts.filter((item)=>{
+            return item.price <= Number(mp);
+        });
+    }
     if(search){
         sortedProducts = sortedProducts.filter((item)=>{
             item.name = item.name.toLowerCase().startsWith(search.toLowerCase());
