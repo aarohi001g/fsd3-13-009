@@ -27,6 +27,8 @@ app.get("/api/products/query",(req,res)=>{
         sortedProducts = sortedProducts.filter((item)=>{
             return item.price <= Number(mp);
         });
+
+        
     }
     if(search){
         sortedProducts = sortedProducts.filter((item)=>{
@@ -57,6 +59,36 @@ app.get("/api/products/:id",(req,res) => {
 
     
 });
+
+
+app.get("/api/products/:id/reviews",(req,res)=>{
+    
+    res.send("return all reviews for a product with id");
+});
+
+app.get("/api/products/:id/:revid",(req,res)=>{
+    const {id,revid}=req.params;
+    const product = products.find((item)=>item.id===Number(id));
+
+    if(!product){
+
+      res.end(`product not found with id ${id}`);
+      return;
+
+    }
+
+
+    review = product.reviews.map((item)=>item.id===Number(revid));
+    if (!review) {
+      res.end(`review not found with id ${revid}`);
+      return;
+    }
+
+    return res.status(200).json({ status: true, review: review });
+});
+
+
+
 app.use((req, res) => {
   res.status(404).send("route not found");
 });
