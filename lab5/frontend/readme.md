@@ -1,7 +1,7 @@
 # Project Setup
 
 1. create two folder fronted and backend
-2.go to fronted `cd frontend`
+2. go to fronted `cd frontend`
 
  - type `npm create vite@latest`
  - press `Y` if asked to install
@@ -10,6 +10,9 @@
  -select Javascript
  -select ESLint 
  -select Yes and press enter
+3. setup tailwind in react project
+go to google
+  install tailwind with white
 
 
 
