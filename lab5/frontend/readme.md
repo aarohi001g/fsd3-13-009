@@ -21,7 +21,16 @@
 
 
 
-  in react style can be added into html by class Name because class is a predefined keyword in react
+in react style can be added into html by class Name because class is a predefined keyword in react
+when JS fun returns directly html contents, called components
+
+
+to make component- 
+start with capital letter
+it must return html
+must be closed at the calling time
+it can be used anywhere anytime
+
 
 
 
