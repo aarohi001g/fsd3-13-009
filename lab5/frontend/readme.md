@@ -11,8 +11,17 @@
  -select ESLint 
  -select Yes and press enter
 3. setup tailwind in react project
-go to google
+  go to google
   install tailwind with white
+
+
+
+
+
+
+
+
+  in react style can be added into html by class Name because class is a predefined keyword in react
 
 
 
